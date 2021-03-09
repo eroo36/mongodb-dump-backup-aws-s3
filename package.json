@@ -1,6 +1,6 @@
 {
   "name": "mongodb-dump-backup-aws-s3",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "description": "A utility to backup/dump mongo database to amazon s3",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,14 @@
     "aws-sdk": "^2.391.0",
     "dotenv": "^8.2.0",
     "moment": "^2.29.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eroo36/mongodb-dump-backup-aws-s3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Eroo36/mongodb-dump-backup-aws-s3/issues"
+  },
+  "homepage": "https://github.com/Eroo36/mongodb-dump-backup-aws-s3#readme"
 }
