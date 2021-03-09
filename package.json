@@ -1,0 +1,23 @@
+{
+  "name": "mongodb-dump-backup-aws-s3",
+  "version": "1.0.5",
+  "description": "A utility to backup/dump mongo database to amazon s3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongo",
+    "mongodb",
+    "s3",
+    "amazons3",
+    "aws"
+  ],
+  "author": "Eren Doğruca ( edogruca@gmail.com )",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.391.0",
+    "dotenv": "^8.2.0",
+    "moment": "^2.29.1"
+  }
+}
