@@ -15,7 +15,7 @@ A utility to backup/dump mongo database to amazon s3
 ### Working example:
 
   ```
-  const mognoS3Backup = require("./index");
+  const mongoS3Backup = require("./index");
 const dotenv = require("dotenv");
 const moment = require("moment");
 dotenv.config(".env");
@@ -25,7 +25,7 @@ const accessKey = process.env.AWS_ACCESS_KEY_ID;
 const accessSecret = process.env.AWS_SECRET_ACCESS_KEY;
 const dbConnectionUri = process.env.MONGO_URI;
 
-const backupClient = mognoS3Backup({ bucketName, accessKey, accessSecret });
+const backupClient = mongoS3Backup({ bucketName, accessKey, accessSecret });
 const date = moment().format("MMMM Do HH-mm");
 
 backupClient
