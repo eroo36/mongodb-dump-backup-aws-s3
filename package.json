@@ -1,6 +1,6 @@
 {
   "name": "node-mongodump-s3",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A utility to backup/dump mongo database to amazon s3",
   "main": "index.js",
   "scripts": {
