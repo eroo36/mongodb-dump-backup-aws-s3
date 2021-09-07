@@ -31,11 +31,11 @@ module.exports = function ({ bucketName, accessKey, accessSecret }) {
     });
   }
 
-  function uploadToS3(file, fileName, callback = (err, data) => {}) {
+  function uploadToS3(file, fileName, prefix, callback = (err, data) => {}) {
     s3Bucket.upload(
       {
         Bucket: bucketName,
-        Key: fileName,
+        Key: `${prefix || ""}${fileName}`,
         Body: file,
       },
       (err, data) => {
@@ -48,7 +48,7 @@ module.exports = function ({ bucketName, accessKey, accessSecret }) {
   }
 
   return {
-    backupDatabase({ uri, backupName, gzip }, callback = () => {}) {
+    backupDatabase({ uri, backupName, prefix, gzip }, callback = () => {}) {
       return new Promise((resolve, reject) => {
         if (!uri || !backupName) {
           throw new Error("uri and backupName are required parameters");
@@ -61,6 +61,7 @@ module.exports = function ({ bucketName, accessKey, accessSecret }) {
           uploadToS3(
             fs.createReadStream(backupPath),
             backupName,
+            prefix,
             (err, data) => {
               if (err) {
                 callback(err);
