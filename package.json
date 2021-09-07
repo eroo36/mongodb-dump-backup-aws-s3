@@ -16,9 +16,7 @@
   "author": "Jahid( hello@jahid.dev )",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.391.0",
-    "dotenv": "^8.2.0",
-    "moment": "^2.29.1"
+    "aws-sdk": "^2.391.0"
   },
   "devDependencies": {},
   "repository": {
